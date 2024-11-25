@@ -5,88 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Web Đẹp</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        h1, h2 {
-            color: #6A1B9A;
-            text-align: center;
-        }
+
+        /* Main Title */
         h1 {
-            font-size: 2.5em;
-            margin-top: 30px;
+            color: #fff;
+            font-size: 3em;
+            text-align: center;
+            margin: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
+        /* Subheading and Links */
         h2 {
-            font-size: 2em;
-            margin-top: 20px;
+            color: #fff;
+            font-size: 2.5em;
+            margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+
         p {
+            color: #fff;
             font-size: 1.5em;
             text-align: center;
-            color: #ff4081;
+            margin: 20px 0;
         }
+
         p a {
-            text-decoration: none;
             color: #ff4081;
             font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
+
         p a:hover {
-            text-decoration: underline;
+            color: #fff;
         }
+
+        /* Member List */
         ul {
             list-style-type: none;
             padding: 0;
             text-align: center;
         }
+
         ul li {
             font-size: 1.5em;
-            color: #00796b;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.6);
             margin: 10px 0;
+            padding: 10px 20px;
+            border-radius: 20px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
         }
+
+        ul li:hover {
+            transform: translateY(-5px);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Table Styling */
         table {
             width: 80%;
-            margin: 30px auto;
+            margin: 40px auto;
             border-collapse: collapse;
-            border: 1px solid #ddd;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
+
         th, td {
-            padding: 12px;
+            padding: 15px;
             text-align: center;
         }
+
         th {
-            background-color: #6A1B9A;
-            color: white;
+            background-color: #ff4081;
+            color: #fff;
+            font-size: 1.2em;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+
+        td {
+            font-size: 1.1em;
+            color: #333;
+            border-bottom: 1px solid #ddd;
         }
+
+        tr:hover {
+            background-color: #f4f4f9;
+        }
+
+        /* Image Styling */
         img {
-            display: block;
             max-width: 100%;
+            height: auto;
+            display: block;
             margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
+        /* Video Styling */
         video {
-            display: block;
             max-width: 100%;
             margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: block;
         }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             h1, h2 {
-                font-size: 1.8em;
+                font-size: 2em;
             }
+
             p {
                 font-size: 1.2em;
             }
+
             ul li {
                 font-size: 1.2em;
             }
+
             table {
                 width: 90%;
             }
@@ -95,10 +153,11 @@
 </head>
 <body>
 
+    <h1>Danh sách thành viên nhóm 2</h1>
+
     <p>I love you</p>
     <p><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FTr%25C3%25A1i_tim_%2528bi%25E1%25BB%2583u_t%25C6%25B0%25E1%25BB%25A3ng%2529&psig=AOvVaw1ueCqI8KbHRHFGfw10mlGC&ust=1731470213318000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDKkJ_z1YkDFQAAAAAdAAAAABAE">Trái tim</a></p>
 
-    <h1>Danh sách thành viên nhóm 2</h1>
     <ul>
         <li>Ngọc Hân</li>
         <li>Nhân Ái</li>
