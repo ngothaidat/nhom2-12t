@@ -81,57 +81,6 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        /* Table Styling */
-        table {
-            width: 80%;
-            margin: 40px auto;
-            border-collapse: collapse;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #ff4081;
-            color: #fff;
-            font-size: 1.2em;
-        }
-
-        td {
-            font-size: 1.1em;
-            color: #333;
-            border-bottom: 1px solid #ddd;
-        }
-
-        tr:hover {
-            background-color: #f4f4f9;
-        }
-
-        /* Image Styling */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 30px auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Video Styling */
-        video {
-            max-width: 100%;
-            margin: 30px auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: block;
-        }
-
         /* Form Styles */
         .form-container {
             width: 80%;
@@ -191,6 +140,56 @@
             margin-top: 20px;
         }
 
+        /* Table Styling */
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ff4081;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
+        td {
+            font-size: 1.1em;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f4f4f9;
+        }
+
+        /* Image and Video Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        video {
+            max-width: 100%;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             h1, h2 {
@@ -227,31 +226,12 @@
     </ul>
 
     <h2>Bảng điểm</h2>
-    <table>
+    <table id="scoreTable">
         <tr>
             <th>Họ và tên</th>
             <th>Điểm</th>
         </tr>
-        <tr>
-            <td>Lê Thị Ngọc Hân</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Trần Thị Như Quỳnh</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Ngô Thái Đạt</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Nguyễn Ngọc Nhân Ái</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Lê Kim Ngân</td>
-            <td>10</td>
-        </tr>
+        <!-- Bảng điểm sẽ được cập nhật khi có đánh giá mới -->
     </table>
 
     <!-- Form đánh giá -->
@@ -275,4 +255,66 @@
     </div>
 
     <p>
-        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FTr%25C3%25A1i_tim_%2528bi%25E1%25BB%2583u_t%25C6%
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FTr%25C3%25A1i_tim_%2528bi%25E1%25BB%2583u_t%25C6%25B0%25E1%25BB%25A3ng%2529&psig=AOvVaw1ueCqI8KbHRHFGfw10mlGC&ust=1731470213318000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDKkJ_z1YkDFQAAAAAdAAAAABAE">
+            Trái tim
+        </a>
+    </p>
+
+    <img src="heart.png" alt="Trái tim">
+
+    <video width="640" height="360" controls>
+        <source src="heart.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        let ratings = []; // Mảng lưu trữ các đánh giá
+
+        // Hàm gửi đánh giá
+        function submitRating() {
+            const fullname = document.getElementById('fullname').value;
+            const rating = parseInt(document.getElementById('rating').value);
+
+            if (fullname && rating >= 1 && rating <= 10) {
+                // Thêm đánh giá vào mảng
+                ratings.push({ fullname, rating });
+
+                // Cập nhật bảng điểm
+                updateScoreTable();
+
+                // Tính và hiển thị điểm trung bình
+                calculateAverage();
+
+                // Xóa các giá trị đã nhập
+                document.getElementById('fullname').value = '';
+                document.getElementById('rating').value = '';
+            } else {
+                alert('Vui lòng nhập họ tên và điểm hợp lệ (1-10).');
+            }
+        }
+
+        // Hàm cập nhật bảng điểm
+        function updateScoreTable() {
+            const table = document.getElementById('scoreTable');
+            // Xóa tất cả các hàng trừ hàng tiêu đề
+            table.querySelectorAll('tr:not(:first-child)').forEach(row => row.remove());
+
+            // Thêm các hàng mới vào bảng
+            ratings.forEach(rating => {
+                const row = table.insertRow();
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                cell1.textContent = rating.fullname;
+                cell2.textContent = rating.rating;
+            });
+        }
+
+        // Hàm tính điểm trung bình
+        function calculateAverage() {
+            const total = ratings.reduce((sum, rating) => sum + rating.rating, 0);
+            const average = total / ratings.length;
+            document.getElementById('averageScore').textContent = `Điểm trung bình: ${average.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>
