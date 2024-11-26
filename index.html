@@ -30,7 +30,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* Subheading and Links */
         h2 {
             color: #fff;
             font-size: 2.5em;
@@ -53,13 +52,11 @@
             transition: color 0.3s ease; /* Thêm hiệu ứng chuyển màu khi hover */
         }
 
-        /* Màu của liên kết khi người dùng di chuột vào */
         ul li a:hover {
             color: #fff; /* Màu trắng khi hover */
             text-decoration: underline; /* Thêm gạch dưới khi hover */
         }
 
-        /* Member List */
         ul {
             list-style-type: none;
             padding: 0;
@@ -135,6 +132,65 @@
             display: block;
         }
 
+        /* Form Styles */
+        .form-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h2 {
+            color: #ff4081;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff80ab;
+        }
+
+        .average-score {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff4081;
+            text-align: center;
+            margin-top: 20px;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             h1, h2 {
@@ -151,6 +207,10 @@
 
             table {
                 width: 90%;
+            }
+
+            .form-container {
+                padding: 20px;
             }
         }
     </style>
@@ -194,17 +254,25 @@
         </tr>
     </table>
 
+    <!-- Form đánh giá -->
+    <div class="form-container">
+        <h2>Đánh giá trang web</h2>
+        <div class="form-group">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" placeholder="Nhập họ và tên">
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Điểm đánh giá (1-10):</label>
+            <input type="number" id="rating" min="1" max="10" placeholder="Điểm từ 1 đến 10">
+        </div>
+
+        <button class="submit-btn" onclick="submitRating()">Gửi Đánh Giá</button>
+
+        <div class="average-score" id="averageScore">
+            <!-- Điểm trung bình sẽ hiển thị ở đây -->
+        </div>
+    </div>
+
     <p>
-        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FTr%25C3%25A1i_tim_%2528bi%25E1%25BB%2583u_t%25C6%25B0%25E1%25BB%25A3ng%2529&psig=AOvVaw1ueCqI8KbHRHFGfw10mlGC&ust=1731470213318000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDKkJ_z1YkDFQAAAAAdAAAAABAE">
-            Trái tim
-        </a>
-    </p>
-
-    <img src="heart.png" alt="Trái tim">
-
-    <video width="640" height="360" controls>
-        <source src="heart.mp4" type="video/mp4">
-    </video>
-
-</body>
-</html>
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FTr%25C3%25A1i_tim_%2528bi%25E1%25BB%2583u_t%25C6%
