@@ -40,7 +40,7 @@
             border-radius: 50%; /* Bo tròn hình ảnh */
             margin: 20px 0; /* Khoảng cách trên và dưới hình ảnh */
         }
-        .home-button {
+        .home-button, .facebook-link {
             background-color: #ff4081; /* Màu nền của nút */
             color: white; /* Màu chữ */
             border: none; /* Bỏ viền */
@@ -49,8 +49,10 @@
             cursor: pointer; /* Hiệu ứng con trỏ khi hover */
             font-size: 16px; /* Kích thước chữ */
             margin-top: 20px; /* Khoảng cách trên nút */
+            text-decoration: none; /* Bỏ gạch chân */
+            display: inline-block; /* Cho nút hiển thị cạnh nhau */
         }
-        .home-button:hover {
+        .home-button:hover, .facebook-link:hover {
             background-color: #ff77a8; /* Màu nền khi hover */
         }
         .achievement-list {
@@ -90,7 +92,7 @@
         <p>Học sinh lớp 12 Toán 22 - 25</p>
         <p>Ngày tháng năm sinh: 17/02/2007</p>
         <p>Quê quán: ấp Giống Nâu, xã Nhuận Phú Tân, huyện Mỏ Cày Bắc, tỉnh Bến Tre</p>
-        <p>Tính cách: CHỮNG CHẠC</p>
+        <p>Tính cách: CHỨNG CHẠC</p>
         <p>Điểm mạnh: Gì cũng làm được</p>
         <p>Điểm yếu: Không biết nên làm gì</p>
         <h2>Thành tích:</h2>
@@ -106,6 +108,7 @@
             <li>Nhận giấy chứng nhận hoàn thành khóa học in 3D tại Tra Vinh University</li>
         </ul>
         <button class="home-button" onclick="goHome()">Home</button> <!-- Nút Home -->
+        <a href="https://www.facebook.com/han.lethingoc.92560281" class="facebook-link" target="_blank">Xem Facebook</a> <!-- Liên kết tới Facebook -->
     </div>
 
     <script>
