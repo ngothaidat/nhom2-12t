@@ -24,7 +24,6 @@
         p {
             line-height: 1.6;
             margin: 10px 0;
-            position: relative;
         }
         .container {
             max-width: 800px;
@@ -33,15 +32,13 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Căn giữa cho nội dung */
         }
         .profile-image {
-            position: absolute; 
-            right: 0; 
-            top: 0; 
-            width: 5px; 
+            width: 30px; /* Kích thước hình ảnh */
             height: auto; 
-            border-radius: 50%; 
-            margin-left: 20px; 
+            border-radius: 50%; /* Bo tròn hình ảnh */
+            margin: 20px 0; /* Khoảng cách trên và dưới hình ảnh */
         }
         .achievement-list {
             list-style-type: none;
@@ -58,12 +55,6 @@
         .achievement-list li:hover {
             transform: scale(1.05);
         }
-        img {
-            width: 5%; 
-            height: auto;
-            border-radius: 8px; 
-            margin-bottom: 20px; 
-        }
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -71,11 +62,8 @@
             h1 {
                 font-size: 24px;
             }
-            p {
-                font-size: 16px;
-            }
             .profile-image {
-                width: 80px; 
+                width: 80px; /* Thay đổi kích thước hình ảnh trên thiết bị nhỏ */
             }
         }
     </style>
@@ -84,10 +72,8 @@
 
     <div class="container">
         <h1>Giới thiệu Ngọc Hân</h1>
-        <p>
-            Họ và tên: Lê Thị Ngọc Hân
-            <img src="han.jpg" alt="Hình ảnh Ngọc Hân"> 
-        </p>
+        <img src="han.jpg" alt="Hình ảnh Ngọc Hân" class="profile-image"> <!-- Hình ảnh nằm dưới tiêu đề -->
+        <p>Họ và tên: Lê Thị Ngọc Hân</p>
         <p>Học sinh lớp 12 Toán 22 - 25</p>
         <p>Ngày tháng năm sinh: 17/02/2007</p>
         <p>Quê quán: ấp Giống Nâu, xã Nhuận Phú Tân, huyện Mỏ Cày Bắc, tỉnh Bến Tre</p>
@@ -96,7 +82,6 @@
         <p>Điểm yếu: Không biết nên làm gì</p>
         <h2>Thành tích:</h2>
         <ul class="achievement-list">
-            <li>Thành thạo 3 ngôn ngữ từ năm 3 tuổi</li>
             <li>Giải nhì cuộc thi Sáng tạo TTNNĐ cấp huyện cấp Tiểu học</li>
             <li>Nhất khối 4 năm liền</li>
             <li>Giải nhì cuộc thi vẽ tranh cấp huyện (lớp 7)</li>
