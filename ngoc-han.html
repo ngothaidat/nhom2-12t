@@ -40,6 +40,19 @@
             border-radius: 50%; /* Bo tròn hình ảnh */
             margin: 20px 0; /* Khoảng cách trên và dưới hình ảnh */
         }
+        .home-button {
+            background-color: #ff4081; /* Màu nền của nút */
+            color: white; /* Màu chữ */
+            border: none; /* Bỏ viền */
+            border-radius: 5px; /* Bo tròn góc */
+            padding: 10px 20px; /* Khoảng cách trong nút */
+            cursor: pointer; /* Hiệu ứng con trỏ khi hover */
+            font-size: 16px; /* Kích thước chữ */
+            margin-top: 20px; /* Khoảng cách trên nút */
+        }
+        .home-button:hover {
+            background-color: #ff77a8; /* Màu nền khi hover */
+        }
         .achievement-list {
             list-style-type: none;
             padding: 0;
@@ -72,7 +85,7 @@
 
     <div class="container">
         <h1>Giới thiệu Ngọc Hân</h1>
-        <img src="han.jpg" alt="Hình ảnh Ngọc Hân" class="profile-image"> <!-- Hình ảnh nằm dưới tiêu đề -->
+        <img src="han.jpg" alt="Hình ảnh Ngọc Hân" class="profile-image">
         <p>Họ và tên: Lê Thị Ngọc Hân</p>
         <p>Học sinh lớp 12 Toán 22 - 25</p>
         <p>Ngày tháng năm sinh: 17/02/2007</p>
@@ -82,6 +95,7 @@
         <p>Điểm yếu: Không biết nên làm gì</p>
         <h2>Thành tích:</h2>
         <ul class="achievement-list">
+            <li>Thành thạo 3 ngôn ngữ từ năm 3 tuổi</li>
             <li>Giải nhì cuộc thi Sáng tạo TTNNĐ cấp huyện cấp Tiểu học</li>
             <li>Nhất khối 4 năm liền</li>
             <li>Giải nhì cuộc thi vẽ tranh cấp huyện (lớp 7)</li>
@@ -91,7 +105,14 @@
             <li>Top 4 cuộc thi Đấu trường toán học cấp tỉnh</li>
             <li>Nhận giấy chứng nhận hoàn thành khóa học in 3D tại Tra Vinh University</li>
         </ul>
+        <button class="home-button" onclick="goHome()">Home</button> <!-- Nút Home -->
     </div>
+
+    <script>
+        function goHome() {
+            window.history.back(); // Quay về trang trước
+        }
+    </script>
 
 </body>
 </html>
