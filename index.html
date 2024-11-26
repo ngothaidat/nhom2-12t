@@ -45,29 +45,19 @@
             margin: 20px 0;
         }
 
-        p a {
-            color: #ff4081;
+        /* Màu sắc mặc định của liên kết trong danh sách thành viên */
+        ul li a {
+            color: #ff4081; /* Màu hồng */
             font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
+            text-decoration: none; /* Xóa gạch dưới mặc định */
+            transition: color 0.3s ease; /* Thêm hiệu ứng chuyển màu khi hover */
         }
 
-        p a:hover {
-            color: #fff;
+        /* Màu của liên kết khi người dùng di chuột vào */
+        ul li a:hover {
+            color: #fff; /* Màu trắng khi hover */
+            text-decoration: underline; /* Thêm gạch dưới khi hover */
         }
-
-p a {
-    color: #ff4081; 
-    font-weight: bold;
-    text-decoration: none; 
-    transition: color 0.3s ease; 
-}
-
-
-p a:hover {
-    color: #fff;
-    text-decoration: underline; 
-}
 
         /* Member List */
         ul {
