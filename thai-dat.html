@@ -3,123 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu Bản Thân</title>
+    <title>Thái Đạt - Giới thiệu</title>
     <style>
-        /* Cấu hình chung cho body */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            padding: 20px;
+            background-color: #ffe6f2;
             color: #333;
         }
-
-        /* Phần đầu trang */
-        header {
-            background-color: #4CAF50;
-            color: white;
+        h1 {
             text-align: center;
-            padding: 50px 0;
+            color: #ff4081; 
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
-
-        header h1 {
-            font-size: 3em;
-            margin: 0;
+        h2 {
+            color: #ff77a8; 
         }
-
-        /* Phần nội dung chính */
-        .content {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px;
-            gap: 30px;
-        }
-
-        /* Phần hình ảnh */
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Phần giới thiệu bản thân */
-        .bio {
-            max-width: 500px;
-            font-size: 1.1em;
+        p {
             line-height: 1.6;
-            text-align: center;
-            background-color: white;
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Căn giữa cho nội dung */
         }
-
-        .bio h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #4CAF50;
+        .profile-image {
+            width: 120px; /* Kích thước hình ảnh */
+            height: auto; 
+            border-radius: 50%; /* Bo tròn hình ảnh */
+            margin: 20px 0; /* Khoảng cách trên và dưới hình ảnh */
         }
-
-        /* Phần liên kết */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+        .home-button, .facebook-link {
+            background-color: #ff4081; /* Màu nền của nút */
+            color: white; /* Màu chữ */
+            border: none; /* Bỏ viền */
+            border-radius: 5px; /* Bo tròn góc */
+            padding: 10px 20px; /* Khoảng cách trong nút */
+            cursor: pointer; /* Hiệu ứng con trỏ khi hover */
+            font-size: 16px; /* Kích thước chữ */
+            margin-top: 20px; /* Khoảng cách trên nút */
+            text-decoration: none; /* Bỏ gạch chân */
+            display: inline-block; /* Cho nút hiển thị cạnh nhau */
         }
-
-        .social-links a {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: #333;
-            transition: color 0.3s;
+        .home-button:hover, .facebook-link:hover {
+            background-color: #ff77a8; /* Màu nền khi hover */
         }
-
-        .social-links a:hover {
-            color: #4CAF50;
+        .achievement-list {
+            list-style-type: none;
+            padding: 0;
         }
-
-
+        .achievement-list li {
+            background: linear-gradient(135deg, #ffe0b2, #ffccbc); 
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .achievement-list li:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .profile-image {
+                width: 80px; /* Thay đổi kích thước hình ảnh trên thiết bị nhỏ */
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Giới Thiệu Bản Thân</h1>
-    </header>
-
-    <div class="content">
-        <!-- Hình ảnh cá nhân -->
-        <div class="profile-image">
-            <img src="thai-dat.png" alt="Hình ảnh cá nhân">
-        </div>
-
-        <!-- Giới thiệu bản thân -->
-        <div class="bio">
-            <h2>Chào bạn, tôi là Thái Đạt!</h2>
-            <p>Tôi hiện tại là học sinh lớp 12T của trường THPT chuyên Bến Tre. </p>
-            <p>Hãy kết nối với tôi qua các mạng xã hội bên dưới để cùng trao đổi và chia sẻ kiến thức!</p>
-
-            <div class="social-links">
-                <a href="https://web.facebook.com/profile.php?id=100036329840282" target="_blank" title="Facebook">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
-                </a>
-            
-            </div>
-        </div>
+    <div class="container">
+        <h1>Giới thiệu Thái Đạt</h1>
+        <img src="thai-dat.png" alt="Hình ảnh Thái Đạt" class="profile-image">
+        <p>Họ và tên: Ngô Thái Đạt</p>
+        <p>Học sinh lớp 12 Toán 22 - 25</p>
+        <p>Ngày tháng năm sinh: 20/09/2007</p>
+        <p>Quê quán: ấp 3, xã Lương Quới, huyện Giồng Trôm, tỉnh Bến Tre</p>
+        <p>Tính cách: Trẻ trâu</p>
+        <p>Điểm mạnh: Không có điểm yếu </p>
+        <p>Điểm yếu: Không có điểm mạnh</p>
+        <h2>Thành tích:</h2>
+        <ul class="achievement-list">
+            <li>Thông thạo 7 Yasua từ 16 tuổi</li>
+            <li>Hoàn thành DDD 1 lần </li>
+            <li>Học tới lớp 12</li> 
+        </ul>
+        <button class="home-button" onclick="goHome()">Home</button> <!-- Nút Home -->
+        <a href="https://web.facebook.com/profile.php?id=100036329840282" class="facebook-link" target="_blank">Xem Facebook</a> <!-- Liên kết tới Facebook -->
     </div>
 
-    
+    <script>
+        function goHome() {
+            window.history.back(); // Quay về trang trước
+        }
+    </script>
 
 </body>
 </html>
