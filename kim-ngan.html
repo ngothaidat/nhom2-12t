@@ -3,16 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim Ngân- Giới thiệu</title>
+    <title>Kim Ngân - Giới thiệu</title>
     <style>
-        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffe6f2;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #ff4081; 
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #ff77a8; 
+        }
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Căn giữa cho nội dung */
+        }
+        .profile-image {
+            width: 120px; /* Kích thước hình ảnh */
+            height: auto; 
+            border-radius: 50%; /* Bo tròn hình ảnh */
+            margin: 20px 0; /* Khoảng cách trên và dưới hình ảnh */
+        }
+        .home-button, .facebook-link {
+            background-color: #ff4081; /* Màu nền của nút */
+            color: white; /* Màu chữ */
+            border: none; /* Bỏ viền */
+            border-radius: 5px; /* Bo tròn góc */
+            padding: 10px 20px; /* Khoảng cách trong nút */
+            cursor: pointer; /* Hiệu ứng con trỏ khi hover */
+            font-size: 16px; /* Kích thước chữ */
+            margin-top: 20px; /* Khoảng cách trên nút */
+            text-decoration: none; /* Bỏ gạch chân */
+            display: inline-block; /* Cho nút hiển thị cạnh nhau */
+        }
+        .home-button:hover, .facebook-link:hover {
+            background-color: #ff77a8; /* Màu nền khi hover */
+        }
+        .achievement-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .achievement-list li {
+            background: linear-gradient(135deg, #ffe0b2, #ffccbc); 
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .achievement-list li:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .profile-image {
+                width: 80px; /* Thay đổi kích thước hình ảnh trên thiết bị nhỏ */
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Giới thiệu Kim Ngân</h1>
-    <p>Thông tin về Kim Ngân...</p>
- 
+    <div class="container">
+        <h1>Giới thiệu Kim Ngân</h1>
+        <img src="ngan.jpg" alt="Hình ảnh Ngọc Hân" class="profile-image">
+        <p>Họ và tên: Lê Kim Ngân</p>
+        <p>Học sinh lớp 12 Toán 22 - 25</p>
+        <p>Ngày tháng năm sinh: 7/11/2007</p>
+        <p>Quê quán: phường 5, thành phố Bến Tre, tỉnh Bến Tre</p>
+        <p>Tính cách: THẲNG thắn</p>
+        <p>Điểm mạnh: Biết chơi thể thao</p>
+        <p>Điểm yếu: Chơi ngu</p>
+        <h2>Thành tích:</h2>
+        <ul class="achievement-list">
+            <li>Giải nhì HSG cấp thành phố ( lớp 9 )</li>
+            <li>Giải khuyến khích HSG cấp tỉnh ( lớp 9 )</li>
+            <li>Giải nhì HKPĐ cấp thành phố ( môn bóng chuyền )</li>
+        </ul>
+        <button class="home-button" onclick="goHome()">Home</button> <!-- Nút Home -->
+        <a href="https://www.facebook.com/dise.le.3"_blank">Xem Facebook</a> <!-- Liên kết tới Facebook -->
+    </div>
+
+    <script>
+        function goHome() {
+            window.history.back(); // Quay về trang trước
+        }
+    </script>
 
 </body>
 </html>
