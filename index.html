@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 2 12T</title>
     <style>
-        /* Global Styles */
+       
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -21,7 +21,7 @@
             overflow-y: scroll;
         }
 
-        /* Main Title */
+       
         h1 {
             color: #fff;
             font-size: 3em;
@@ -44,17 +44,17 @@
             margin: 20px 0;
         }
 
-        /* Màu sắc mặc định của liên kết trong danh sách thành viên */
+        
         ul li a {
-            color: #ff4081; /* Màu hồng */
+            color: #ff4081; 
             font-weight: bold;
-            text-decoration: none; /* Xóa gạch dưới mặc định */
-            transition: color 0.3s ease; /* Thêm hiệu ứng chuyển màu khi hover */
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         ul li a:hover {
-            color: #fff; /* Màu trắng khi hover */
-            text-decoration: underline; /* Thêm gạch dưới khi hover */
+            color: #fff; 
+            text-decoration: underline; 
         }
 
         ul {
@@ -140,7 +140,7 @@
             margin-top: 20px;
         }
 
-        /* Table Styling */
+        
         table {
             width: 80%;
             margin: 40px auto;
@@ -172,7 +172,7 @@
             background-color: #f4f4f9;
         }
 
-        /* Image and Video Styling */
+        
         img {
             max-width: 100%;
             height: auto;
@@ -190,7 +190,7 @@
             display: block;
         }
 
-        /* Responsive Design */
+        
         @media (max-width: 768px) {
             h1, h2 {
                 font-size: 2em;
@@ -267,24 +267,23 @@
     </video>
 
     <script>
-        let ratings = []; // Mảng lưu trữ các đánh giá
-
-        // Hàm gửi đánh giá
+        let ratings = []; 
+       
         function submitRating() {
             const fullname = document.getElementById('fullname').value;
             const rating = parseInt(document.getElementById('rating').value);
 
             if (fullname && rating >= 1 && rating <= 10) {
-                // Thêm đánh giá vào mảng
+               
                 ratings.push({ fullname, rating });
 
-                // Cập nhật bảng điểm
+               
                 updateScoreTable();
 
-                // Tính và hiển thị điểm trung bình
+               
                 calculateAverage();
 
-                // Xóa các giá trị đã nhập
+              
                 document.getElementById('fullname').value = '';
                 document.getElementById('rating').value = '';
             } else {
@@ -292,13 +291,13 @@
             }
         }
 
-        // Hàm cập nhật bảng điểm
+     
         function updateScoreTable() {
             const table = document.getElementById('scoreTable');
-            // Xóa tất cả các hàng trừ hàng tiêu đề
+           
             table.querySelectorAll('tr:not(:first-child)').forEach(row => row.remove());
 
-            // Thêm các hàng mới vào bảng
+           
             ratings.forEach(rating => {
                 const row = table.insertRow();
                 const cell1 = row.insertCell(0);
@@ -308,7 +307,7 @@
             });
         }
 
-        // Hàm tính điểm trung bình
+        
         function calculateAverage() {
             const total = ratings.reduce((sum, rating) => sum + rating.rating, 0);
             const average = total / ratings.length;
